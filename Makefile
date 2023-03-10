@@ -1,12 +1,16 @@
 # -*- Makefile  -*-
+co:=gcc
+exe:main
+objec:main.o funA.o funB.o
 
 
-main: main.o
-	gcc  main.o -o main -l m 
+all: $(objec)
+	@$(co) -o $(exe) $^ -l m 
 
-main.o: main.c
-	gcc -c main.c
+%.o: %.c
+	@$(co) -c $<
 
 
 clean: 
-	rm *.o main *.out
+	@echo Clean up objective files and prog....
+	@rm -rf $(objec) main
