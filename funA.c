@@ -1,19 +1,35 @@
-#include<stdio.h>
-#include<stdio.h>
-#include<math.h>
+/*funA.c*/
+#include"funA.h"
 
-float set_account(float dollar){
-	printf("==============================\n");
-	printf("Set Account money to %.2f$\n",dollar);
-	printf("==============================\n");
-	return dollar;
+extern float _main_base;
+static struct _account{
+	float base;
+	pthread_mutex_t mutex;
+	void(*set_account_base)(float);
+	float(*get_account_base)();
+} Account = {
+	0.0,
+	PTHREAD_MUTEX_INITIALIZER,
+	set_account_base,
+	get_account_base
+};
+void set_account_base(float value){
+	pthread_mutex_lock(&Account.mutex);
+	Account.base = value;
+	pthread_mutex_unlock(&Account.mutex);
 }
-int funA(){
-	float price;
+float get_account_base(){
+	return Account.base;
+}
+void funA(){
+	float account_money =99.99;//init
 	printf("(FunA)Set Account money:");
-	//scanf("%f",&price);	
-	price = set_account(price);
-	//printf("\n");		
-return price;
+	scanf("%f",&account_money);
+	printf("=====================================\n");
+	Account.set_account_base(account_money);	
+	_main_base  = Account.get_account_base(account_money);	
+	printf("Set account money to %.2f\n",_main_base);	
+	printf("=====================================\n");		
+	
 }
 

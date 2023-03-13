@@ -1,20 +1,17 @@
+/*main.c*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<stdlib.h>
-#include"funA.c"
-#include"funB.c"
-
+float _main_base;
 int main(){
-	
 
-	float account = 0.00;//initial value
-	printf("Set Account money:");
+
+	//printf("Set Account money:");
 	/*from funA*/
-	scanf("%f",&account);
-	account = set_account(account);
+	//scanf("%f",&account);
+	funA();
+	//printf("%.2f\n",_main_base);
 	/*from funB*/
-	account = sampoo(account,5.99);
-	printf("Buy a sampoo for %.2f$.\nStill remain %.2f$.\n",5.99,account);
+	funB();
 	/*from funC*/
 
 	/*from funD*/

@@ -1,6 +1,6 @@
 # -*- Makefile  -*-
 CC:=gcc
-CFLAGS =-c -Wall  
+CFLAGS =-c 
 exe:=main
 
 build:=$(shell mkdir -p build)
