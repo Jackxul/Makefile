@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include"funB.h"
 extern float _main_base;
+float _main_total;
 static struct _item{
 	float _shopping_cart;
 	pthread_mutex_t mutex;
@@ -42,6 +43,6 @@ void funB(){
 	printf("\nSet Item_3 price => %.2f\n",item_3);
 	printf("==============================\n");
 	printf("Total => %.2f\n",Item.get_item_price());
-	_main_base -= get_item_price();
-	printf("Bought 3 items...Still remain %.2f\n",_main_base);
+	_main_total = get_item_price();
+	//printf("Bought 3 items...Still remain %.2f\n",_main_base);
 }

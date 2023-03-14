@@ -13,7 +13,8 @@ int main(){
 	/*from funB*/
 	funB();
 	/*from funC*/
-
+	funC();
+	/*from funC*/
 	/*from funD*/
 
 	/*from funE*/
