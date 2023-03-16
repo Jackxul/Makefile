@@ -37,13 +37,15 @@ void funC(){
 	
 	printf("--------------Disount--------------\n");
 	Discount.set_Tag();
-	printf("Congrates you get a %.0f %",(1.00 - Discount.Seed[Discount.Tag])*100);
+	printf("Congrates you get a %.0f %%",(1.00 - Discount.Seed[Discount.Tag])*100);
 	printf(" OFF\n");
 	_main_total *= Discount.Seed[Discount.Tag];	
 	printf("Consumption ===>>> \t %.2f$\n",_main_total);
 	printf("===================================\n");
-	printf("Acount Remain : \t\t %.2f$\n",_main_base-_main_total);
-	
-	
-	
+
+	if((_main_base - _main_total) >= 0.00)
+		printf("Acount Remain : \t\t");
+	else
+		printf("Acount Still Need : \t");
+	printf(" %.2f$\n",_main_base-_main_total);
 }
