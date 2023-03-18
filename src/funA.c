@@ -1,5 +1,6 @@
 /*funA.c*/
 #include"funA.h"
+
 extern float _main_base;
 static struct _account{
 	float base;

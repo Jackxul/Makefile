@@ -21,10 +21,6 @@ main: $(OBJ)
 .o:$(SRC) 
 	@${CC} $^ -c $@
 
-#call sub Makefile
-sub:
-	@echo Call src clean
-	@cd src && $(MAKE) clean
 
 .PHONY: clean
 clean: 
