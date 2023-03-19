@@ -1,6 +1,5 @@
 /*funA.c*/
 #include"funA.h"
-
 extern float _main_base;
 static struct _account{
 	float base;
@@ -25,11 +24,11 @@ void funA(){
 	float account_money =99.99;//init
 	printf("(FunA)Set Account money:");
 	scanf("%f",&account_money);
-	printf("=====================================\n");
+	printf("=================================\n");
 	Account.set_account_base(account_money);	
 	_main_base  = Account.get_account_base(account_money);	
 	printf("Set account money to %.2f\n",_main_base);	
-	printf("=====================================\n");		
+	printf("=================================\n");		
 	
 }
 

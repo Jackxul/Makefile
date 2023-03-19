@@ -27,7 +27,7 @@ void funB(){
 	float item_1 = 0.00;//init
 	float item_2 = 0.00;//init
 	float item_3 = 0.00;//init
-	printf("---------Buy 3 Items---------");
+	printf("\n-----------Buy 3 Items-----------\n");
 	printf("\nSet Item_1 price :");
 	scanf("%f",&item_1);
 	printf("\nSet Item_2 price :");
@@ -37,11 +37,11 @@ void funB(){
 	
 	Item.set_item_price((item_1 + item_2 + item_3));
 
-	printf("---------Shopping Cart---------");
+	printf("\n----------Shopping Cart----------\n");
 	printf("\nSet Item_1 price => %.2f\n",item_1);
 	printf("\nSet Item_2 price => %.2f\n",item_2);
 	printf("\nSet Item_3 price => %.2f\n",item_3);
-	printf("==============================\n");
+	printf("=================================\n");
 	printf("Total => %.2f\n",Item.get_item_price());
 	_main_total = get_item_price();
 	//printf("Bought 3 items...Still remain %.2f\n",_main_base);

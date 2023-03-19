@@ -3,7 +3,6 @@ CC:=gcc
 CFLAGS =-c -Wall  
 exe:=main
 
-build:=$(shell mkdir -p build)
 
 SRC=${wildcard *.c}
 #OBJ=main.o funA.o funB.o
@@ -16,15 +15,17 @@ OBJ=${SRC:.c=.o}
 
 
 main: $(OBJ)
-	@${CC} $(OBJ) -o $@    
+	@${CC} $(OBJ) -o $@
+	@mv ${OBJ} ./../build/
+	@mv ${exe} ./../    
 
 .o:$(SRC) 
 	@${CC} $^ -c $@
 
 
-.PHONY: clean
-clean: 
-	@echo Clean up objective files and prog....
-	@rm -rf ${exe}
-	@rm -rf build
-	@rm -rf *.o
+#.PHONY: clean
+#clean: 
+#	@echo Clean up objective files and prog....
+#	@rm -rf ${exe}
+#	@rm -rf build
+#	@rm -rf *.o
