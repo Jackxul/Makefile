@@ -14,11 +14,12 @@ OBJ=${SRC:.c=.o}
 #$* 工作目標的主檔名
 
 main: $(OBJ)
-	@${CC} $(OBJ) -o $@
-	@mv ${OBJ} ./../build/
-	@mv ${exe} ./../exe
-	@rm ./*.h 
-
+	${CC} $(OBJ) -o $@
+	@echo "\nPhase3 -> Create executable file and clean includes\n"
+	@sleep 0.5
+	mv ${OBJ} ./../build/
+	mv ${exe} ./../exe
+	rm ./*.h 
 .o:$(SRC) 
 	@${CC} $^ -c $@ 
 
