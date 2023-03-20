@@ -1,6 +1,6 @@
 # -*-Sub  Makefile  -*-
 CC:=gcc
-CFLAGS =-c -Wall  
+CFLAGS =-Wall -g
 exe:=main
 
 
@@ -13,14 +13,14 @@ OBJ=${SRC:.c=.o}
 #$^ 所有必要條件的檔名
 #$* 工作目標的主檔名
 
-
 main: $(OBJ)
-	@${CC} $(OBJ) -o $@
+	@${CC} ${CFLAGS} $(OBJ) -o $@
 	@mv ${OBJ} ./../build/
 	@mv ${exe} ./../exe
+	@rm ./*.h 
 
 .o:$(SRC) 
-	@${CC} $^ -c  $@ 
+	@${CC} ${CFLAGS} $^ -c $@ 
 
 
 #.PHONY: clean

@@ -1,9 +1,10 @@
 # -*- Makefile  -*-
 CC:=gcc
-CFLAGS =-c -Wall  
+CFLAGS =-g -Wall  
 exe:=main
 
 build:=$(shell mkdir -p build)
+build:=$(shell mkdir exe)
 
 SRC=${wildcard *.c}
 #OBJ=main.o funA.o funB.o
@@ -24,7 +25,7 @@ main: $(OBJ)
 #call sub Makefile
 sub:
 	@echo Call sub Makefile
-	@mkdir exe
+	@cp include/*.h src
 	@cd src && $(MAKE)
 
 .PHONY: clean
