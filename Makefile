@@ -24,12 +24,13 @@ main: $(OBJ)
 #call sub Makefile
 sub:
 	@echo Call sub Makefile
+	@mkdir exe
 	@cd src && $(MAKE)
 
 .PHONY: clean
 clean: 
 	@echo Clean up objective files and prog....
-	@rm -rf ${exe}
+	@rm -rf exe
 	@rm -rf build
 #	@cd src && $(MAKE) clean
 #	@rm -rf *.o

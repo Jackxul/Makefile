@@ -1,4 +1,4 @@
-# -*- Makefile  -*-
+# -*-Sub  Makefile  -*-
 CC:=gcc
 CFLAGS =-c -Wall  
 exe:=main
@@ -17,10 +17,10 @@ OBJ=${SRC:.c=.o}
 main: $(OBJ)
 	@${CC} $(OBJ) -o $@
 	@mv ${OBJ} ./../build/
-	@mv ${exe} ./../    
+	@mv ${exe} ./../exe
 
 .o:$(SRC) 
-	@${CC} $^ -c $@
+	@${CC} $^ -c  $@ 
 
 
 #.PHONY: clean
