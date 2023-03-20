@@ -1,6 +1,9 @@
 /*main.c*/
 #include<stdio.h>
 #include<stdlib.h>
+void funA();
+void funB();
+void funC();
 float _main_base;
 int main(){
 
