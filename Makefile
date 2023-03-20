@@ -1,10 +1,10 @@
 # -*- Makefile  -*-
 CC:=gcc
-CFLAGS =-g -Wall  
+CFLAGS =-c -Wall  
 exe:=main
 
 build:=$(shell mkdir -p build)
-build:=$(shell mkdir exe)
+build:=$(shell mkdir -p exe)
 
 SRC=${wildcard *.c}
 #OBJ=main.o funA.o funB.o
@@ -16,11 +16,6 @@ OBJ=${SRC:.c=.o}
 #$* 工作目標的主檔名
 
 
-main: $(OBJ)
-	@${CC} $(OBJ) -o $@    
-
-.o:$(SRC) 
-	@${CC} $^ -c $@
 
 #call sub Makefile
 sub:
