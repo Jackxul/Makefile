@@ -19,21 +19,18 @@ OBJ=${SRC:.c=.o}
 
 #call sub Makefile
 sub:
-	@echo "\nPhase1 -> copy include to src\n"
-#	@sleep 0.5
-#	cp include/*.h src
-#	@echo "\nPhase2 -> Call sub Makefile \n"
-#	@sleep 0.5
+	@echo "\nPhase1 -> Call sub Makefile \n"
+	@sleep 0.5
 	cd src && $(MAKE)
-	@echo "\nPhase4 -> build project and show structure\n"
-#	@sleep 0.5
+	@echo "\nPhase3 -> build project and show structure\n"
+	@sleep 0.5
 	tree .
-#	@echo "\nPhase5 -> Run exe.\n"
+	@echo "\nPhase4 -> Run exe.\n"
 	@./exe/${exe}
 .PHONY: clean
 clean: 
 	@echo "\nClean up objective files and prog....\n"
-#	@sleep 1
+	@sleep 1
 	@rm -rf exe
 	@rm -rf build
 	@echo "\nDone.\n"

@@ -14,8 +14,8 @@ OBJ=${SRC:.c=.o}
 
 main: $(OBJ)
 	${CC} $(OBJ) $(HEAD) -I include  -o $@
-	@echo "\nPhase3 -> Create executable file and clean includes\n"
-#	@sleep 0.5
+	@echo "\nPhase2 -> Create executable file and clean includes\n"
+	@sleep 0.5
 	mv ${OBJ} ./../build/
 	mv ${exe} ./../exe
 #	rm ./*.h 
