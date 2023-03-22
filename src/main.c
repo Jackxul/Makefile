@@ -12,7 +12,6 @@ void funC();
 
 int main(){
 
-
 	//printf("Set Account money:");
 	/*from funA*/
 	//scanf("%f",&account);
