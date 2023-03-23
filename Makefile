@@ -4,6 +4,7 @@ CFLAGS =-c -Wall
 exe:=main
 
 build:=$(shell mkdir -p build)
+build:=$(shell mkdir -p lib)
 build:=$(shell mkdir -p exe)
 
 SRC=${wildcard *.c}
