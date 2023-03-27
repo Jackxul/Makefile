@@ -7,9 +7,6 @@ build:=$(shell mkdir -p build)
 build:=$(shell mkdir -p lib)
 build:=$(shell mkdir -p exe)
 
-SRC=${wildcard *.c}
-#OBJ=main.o funA.o funB.o
-OBJ=${SRC:.c=.o}
 
 #$@ 工作目標名稱
 #$< 第一個必條件的檔名
