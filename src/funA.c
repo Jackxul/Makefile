@@ -22,7 +22,7 @@ float get_account_base(){
 }
 void funA(){
 	float account_money =99.99;//init
-	printf("(FunA)Set Account money:");
+	printf("(funA)Set Account money:");
 	scanf("%f",&account_money);
 	printf("=================================\n");
 	Account.set_account_base(account_money);	

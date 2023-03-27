@@ -34,7 +34,7 @@ void set_Total(){
 }
        
 void funC(){
-	
+	printf("funC\n");	
 	printf("-------------Disount-------------\n");
 	Discount.set_Tag();
 	printf("Congrates you get a %.0f %%",(1.00 - Discount.Seed[Discount.Tag])*100);

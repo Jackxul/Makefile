@@ -13,11 +13,11 @@ OBJ=${SRC:.c=.o}
 #$* 工作目標的主檔名
 
 main: $(OBJ)
-	${CC} $(OBJ) $(HEAD) -I include  -o $@
+	${CC} $(OBJ) $(HEAD) -I include  -o ./../exe/$@
 	@echo "\nPhase2 -> Create executable file and clean includes\n"
 	@sleep 0.5
-	mv ${OBJ} ./../build/
-	mv ${exe} ./../exe
+#	mv ${OBJ} ./../build/
+#	mv ${exe} ./../exe
 #	rm ./*.h 
 .o:$(SRC) $(DEPS) 
 	@${CC} -o $@ $< $(CFLAGS)

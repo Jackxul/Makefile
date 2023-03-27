@@ -27,6 +27,7 @@ void funB(){
 	float item_1 = 0.00;//init
 	float item_2 = 0.00;//init
 	float item_3 = 0.00;//init
+	printf("funB\n");
 	printf("\n-----------Buy 3 Items-----------\n");
 	printf("\nSet Item_1 price :");
 	scanf("%f",&item_1);
